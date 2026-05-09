@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PiP Cam — Landing Page
 
-## Getting Started
+Landing page do [PiP Cam](https://github.com/silv4b/pip-cam), um widget de câmera flutuante (Picture-in-Picture) desenvolvido com Python e PyQt6.
 
-First, run the development server:
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Webpack**
+
+## Tema
+
+Paleta de cores dark com os tons:
+
+| Cor | Uso |
+|---|---|
+| `#2F4B77` | Cards, bordas, backgrounds secundários |
+| `#3D5FA3` | Hover states, gradientes |
+| `#4D6FC4` | Primary — botões, links, ícones |
+| `#C0DADC` | Accent — destaques em textos e atalhos |
+
+## Seções
+
+- **Hero** — Apresentação com logo animado e CTAs
+- **Features** — Cards com os 8 recursos principais
+- **Shortcuts** — Tabela de atalhos globais
+- **Download** — Instalador Windows + instruções com uv
+- **Footer** — Links para GitHub e licença MIT
+
+## Scripts
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # servidor de desenvolvimento (webpack)
+npm run build    # build de produção
+npm run start    # iniciar servidor de produção
+npm run lint     # verificar lint
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
