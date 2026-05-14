@@ -41,7 +41,7 @@ const FeatureShowcase = () => {
   return (
     <section id="showcase" className="py-12 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Veja como funciona
           </h2>
@@ -51,7 +51,7 @@ const FeatureShowcase = () => {
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
           {showcaseItems.map((item, index) => (
             <div
               key={index}

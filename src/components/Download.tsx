@@ -64,7 +64,7 @@ const Download = () => {
             </div>
           </div>
 
-          <div className="text-center py-12">
+          <div className="text-center py-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Instalação
             </h2>
@@ -78,66 +78,102 @@ const Download = () => {
               Código Fonte
             </h3>
             <p className="text-gray-400 text-sm mb-6">
-              Clone o repositório e instale as dependências com uv para
-              executar a versão mais recente.
+              Clone o repositório e execute a versão mais recente com uv.
             </p>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-2 px-4 py-3 rounded-lg bg-background border border-primary-darker/30 overflow-x-auto">
-                <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
-                <CopyButton text="git clone https://github.com/silv4b/pip-cam.git" />
-                <code className="text-xs sm:text-sm text-gray-300 font-mono whitespace-nowrap">
-                  git clone https://github.com/silv4b/pip-cam.git
-                </code>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-3 rounded-lg bg-background border border-primary-darker/30 overflow-x-auto">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <CopyButton text="cd pip-cam && uv sync && uv run main.py" />
-                <code className="text-xs sm:text-sm text-gray-300 font-mono whitespace-nowrap">
-                  cd pip-cam && uv sync && uv run main.py
-                </code>
-              </div>
+            <div className="space-y-3">
+              {[
+                { label: "Clone", cmd: "git clone https://github.com/silv4b/pip-cam.git" },
+                { label: "Execute", cmd: "cd pip-cam && uv run main.py" },
+              ].map((step, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 px-4 py-3 rounded-lg bg-background border border-primary-darker/30 overflow-x-auto"
+                >
+                  <span className="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0">
+                    {index + 1}
+                  </span>
+                  <span className="text-xs text-gray-500 w-12 shrink-0 uppercase tracking-wider">
+                    {step.label}
+                  </span>
+                  <CopyButton text={step.cmd} />
+                  <code className="text-xs sm:text-sm text-gray-300 font-mono whitespace-nowrap">
+                    {step.cmd}
+                  </code>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        <div className="p-8 rounded-2xl bg-gradient-to-br from-primary-darker/30 to-primary-dark/10 border border-primary-darker/40">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Executar com uv
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Caso não tenha o uv, instale em{" "}
-            <a
-              href="https://docs.astral.sh/uv/getting-started/installation/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-accent transition-colors"
-            >
-              docs.astral.sh/uv
-            </a>
-          </p>
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-primary-darker/30 to-primary-dark/10 border border-primary-darker/40">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Versão Portátil (PowerShell)
+            </h3>
+            <p className="text-gray-400 text-sm mb-6">
+              One-liner via PowerShell para Windows. Baixa e executa a versão
+              portátil sem necessidade de instalador.
+            </p>
+            <div className="space-y-3">
+              {[
+                { label: "Instalar", cmd: "irm https://raw.githubusercontent.com/silv4b/pip-cam/main/install.ps1 | iex" },
+              ].map((step, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 px-4 py-3 rounded-lg bg-background border border-primary-darker/30 overflow-x-auto"
+                >
+                  <span className="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0">
+                    {index + 1}
+                  </span>
+                  <span className="text-xs text-gray-500 w-12 shrink-0 uppercase tracking-wider">
+                    {step.label}
+                  </span>
+                  <CopyButton text={step.cmd} />
+                  <code className="text-xs sm:text-sm text-gray-300 font-mono whitespace-nowrap">
+                    {step.cmd}
+                  </code>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <div className="space-y-3">
-            {[
-              { label: "Clone", cmd: "git clone https://github.com/silv4b/pip-cam.git && cd pip-cam" },
-              { label: "Instale", cmd: "uv sync" },
-              { label: "Execute", cmd: "uv run main.py" },
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 px-4 py-3 rounded-lg bg-background border border-primary-darker/30 overflow-x-auto"
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-primary-darker/30 to-primary-dark/10 border border-primary-darker/40">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Executar com uv
+            </h3>
+            <p className="text-gray-400 text-sm mb-6">
+              Caso não tenha o uv, instale em{" "}
+              <a
+                href="https://docs.astral.sh/uv/getting-started/installation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-accent transition-colors"
               >
-                <span className="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0">
-                  {index + 1}
-                </span>
-                <span className="text-xs text-gray-500 w-12 shrink-0 uppercase tracking-wider">
-                  {step.label}
-                </span>
-                <CopyButton text={step.cmd} />
-                <code className="text-xs sm:text-sm text-gray-300 font-mono whitespace-nowrap">
-                  {step.cmd}
-                </code>
-              </div>
-            ))}
+                docs.astral.sh/uv
+              </a>
+            </p>
+
+            <div className="space-y-3">
+              {[
+                { label: "Clone", cmd: "git clone https://github.com/silv4b/pip-cam.git && cd pip-cam" },
+                { label: "Instale", cmd: "uv sync" },
+                { label: "Execute", cmd: "uv run main.py" },
+              ].map((step, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 px-4 py-3 rounded-lg bg-background border border-primary-darker/30 overflow-x-auto"
+                >
+                  <span className="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0">
+                    {index + 1}
+                  </span>
+                  <span className="text-xs text-gray-500 w-12 shrink-0 uppercase tracking-wider">
+                    {step.label}
+                  </span>
+                  <CopyButton text={step.cmd} />
+                  <code className="text-xs sm:text-sm text-gray-300 font-mono whitespace-nowrap">
+                    {step.cmd}
+                  </code>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
