@@ -27,7 +27,7 @@ const Hero = () => {
         <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed">
           Desenvolvido com <span className="text-primary">Python 3.12+</span> e{" "}
           <span className="text-primary">PyQt6</span>. Uma sobreposição de
-          webcam sempre-visível, altamente customizável para streamers e
+          webcam sempre-visível e customizável para streamers e
           apresentadores.
         </p>
 
