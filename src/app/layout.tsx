@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PiP Cam - Widget de Câmera Flutuante",
   description:
-    "Widget de câmera flutuante inteligente (Picture-in-Picture) desenvolvido com Python e PyQt6. Sobreposição de webcam sempre-visível para streamers e apresentadores.",
+    "Widget de câmera flutuante inteligente (Picture-in-Picture) desenvolvido com Python e PyQt6. Sobreposição de webcam sempre-visível para streams, apresentações, videochamadas e mais.",
   keywords: [
     "pip cam",
     "picture-in-picture",

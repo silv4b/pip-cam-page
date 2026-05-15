@@ -27,8 +27,7 @@ const Hero = () => {
         <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed">
           Desenvolvido com <span className="text-primary">Python 3.12+</span> e{" "}
           <span className="text-primary">PyQt6</span>. Uma sobreposição de
-          webcam sempre-visível e customizável para streamers e
-          apresentadores.
+          webcam sempre-visível e customizável para streams e apresentações.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -60,7 +59,7 @@ const Hero = () => {
         <div className="mt-16 flex items-center justify-center gap-8 text-sm text-gray-500">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-400" />
-            Windows 10/11 • (em breve) Linux • (em breve) macOS
+            Windows 10/11
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary" />

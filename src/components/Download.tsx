@@ -106,7 +106,7 @@ const Download = () => {
 
           <div className="p-8 rounded-2xl bg-gradient-to-br from-primary-darker/30 to-primary-dark/10 border border-primary-darker/40">
             <h3 className="text-lg font-semibold text-white mb-4">
-              Versão Portátil (PowerShell)
+              Versão Portátil
             </h3>
             <p className="text-gray-400 text-sm mb-6">
               One-liner via PowerShell para Windows. Baixa e executa a versão
