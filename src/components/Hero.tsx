@@ -1,3 +1,6 @@
+import Image from "next/image";
+import favicon from "@/app/favicon.ico";
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
@@ -11,7 +14,7 @@ const Hero = () => {
           className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-primary-dark mb-8 shadow-lg"
           style={{ animation: "float 3s ease-in-out infinite" }}
         >
-          <img src="./favicon.ico" alt="favicon" style={{ width: "70px", height: "70px" }} />
+          <Image src={favicon} alt="favicon" width={70} height={70} />
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">

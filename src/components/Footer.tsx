@@ -1,3 +1,6 @@
+import Image from "next/image";
+import favicon from "@/app/favicon.ico";
+
 const Footer = () => {
   return (
     <footer className="mt-auto border-t border-primary-darker/30">
@@ -5,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
-              <img src="./favicon.ico" alt="favicon" style={{ width: "24px", height: "24px" }} />
+              <Image src={favicon} alt="favicon" width={24} height={24} />
             </div>
             <span className="text-sm text-gray-400">
               <span className="text-accent">PiP</span> Cam

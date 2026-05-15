@@ -32,11 +32,10 @@ const Shortcuts = () => {
           {shortcuts.map((shortcut, index) => (
             <div
               key={index}
-              className={`flex items-center justify-between px-6 py-4 ${
-                index % 2 === 0
+              className={`flex items-center justify-between px-6 py-4 ${index % 2 === 0
                   ? "bg-primary-darker/20"
                   : "bg-transparent"
-              } hover:bg-primary-darker/30 transition-colors`}
+                } hover:bg-primary-darker/30 transition-colors`}
             >
               <span className="text-gray-300 text-sm">{shortcut.action}</span>
               <kbd className="px-3 py-1 rounded-lg bg-primary-darker/60 text-accent text-sm font-mono border border-primary/20">
